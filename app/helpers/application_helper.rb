@@ -1,9 +1,4 @@
 module ApplicationHelper
-<<<<<<< HEAD
-=======
-
->>>>>>> filling-in-layout
-  # Return a title on a per-page basis.
   def title
     base_title = "Ruby on Rails Tutorial Sample App"
     if @title.nil?
@@ -12,8 +7,4 @@ module ApplicationHelper
       "#{base_title} | #{@title}"
     end
   end
-<<<<<<< HEAD
 end
-=======
-end
->>>>>>> filling-in-layout
