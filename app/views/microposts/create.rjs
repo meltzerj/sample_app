@@ -1,4 +1,4 @@
-page.insert_html :bottom, :feed_item, :partial => 'shared/feed_item'
+page.insert_html :bottom, :feed_items, :partial => 'shared/feed_item', :object => @micropost
 page.replace_html :user_info, pluralize(current_user.microposts.count, "micropost")
 page[:micropost_form].reset
 page.replace_html :notice, flash[:notice]
