@@ -7,7 +7,7 @@ class MicropostsController < ApplicationController
     respond_to do |format|
       if @micropost.save
         flash[:success] = "Micropost created!"
-        format.html { redirect_to root_path, :notice => 'success' }
+        format.html { redirect_to root_path }
         format.js   
       else
         @feed_items = []
