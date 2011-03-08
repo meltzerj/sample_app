@@ -1,6 +1,4 @@
-$("#micrpost_form").before('<div id="flash_notice"><%= escape_javascript(flash.delete(:notice))%></div>');
+$("#flash_notice").html('<%= escape_javascript(flash.delete(:success))%>');
 $("#user_info").html("<%= pluralize(current_user.microposts.count, "micropost") %>");
-$("#feed_items").prepend(" <%= escape_javascript(render(:partial => @micropost)) %>")
-$("#micrpost_form")[0].reset();
-
-
+$("#feed_items tbody").prepend(" <%= escape_javascript(render(:partial => @micropost)) %>");
+$("#micropost_form")[0].reset();
