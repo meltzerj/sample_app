@@ -1,4 +1,5 @@
 $("#flash_notice").html('<%= escape_javascript(flash.delete(:success))%>');
+$("#flash_notice").addClass('success');
 $("#user_info").html("<%= pluralize(current_user.microposts.count, "micropost") %>");
 $("#feed_items tbody").prepend(" <%= escape_javascript(render(:partial => @micropost)) %>");
 $("#micropost_form")[0].reset();
